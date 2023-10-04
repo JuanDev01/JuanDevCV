@@ -162,24 +162,24 @@ async function getFetch(){
        });
  }
 
-// document.querySelector('#drinkGen').addEventListener('click', getADrink)
+ document.querySelector('#drinkGen').addEventListener('click', getADrink)
 
-// function getADrink(){
-//   const choice = document.querySelector('#aDrink').value
-//   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choice}`
+ function getADrink(){
+   const choice = document.querySelector('#aDrink').value
+   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choice}`
 
-//   fetch(url)
-//       .then(res => res.json()) // parse response as JSON
-//       .then(data => {
-//         console.log(data.drinks[0])
-//         document.querySelector('#nameTheDrink').innerText = data.drinks[0].strDrink
-//         document.querySelector('#drinkImgHere').src = data.drinks[0].strDrinkThumb
-//         document.querySelector('#expTheDrink').innerText = data.drinks[0].strInstructions
-//       })
-//       .catch(err => {
-//           console.log(`error ${err}`)
-//       });
-// }
+   fetch(url)
+       .then(res => res.json()) // parse response as JSON
+       .then(data => {
+         console.log(data.drinks[0])
+         document.querySelector('#nameTheDrink').innerText = data.drinks[0].strDrink
+         document.querySelector('#drinkImgHere').src = data.drinks[0].strDrinkThumb
+         document.querySelector('#expTheDrink').innerText = data.drinks[0].strInstructions
+       })
+       .catch(err => {
+           console.log(`error ${err}`)
+       });
+ }
 
 
 //  document.querySelector('#spillTheBeans').addEventListener('click', getTopReddits)
